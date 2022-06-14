@@ -1,0 +1,397 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "name": "Robin",
+            "strength": 6,
+            "timeAverage": 0.5,
+            "group": "M"
+        },
+        {
+            "id": 1,
+            "name": "Allen",
+            "strength": 10,
+            "timeAverage": 0.5,
+            "group": "M"
+        },
+        {
+            "id": 2,
+            "name": "Matilda",
+            "strength": 4,
+            "timeAverage": 0.0,
+            "group": "F"
+        },
+        {
+            "id": 3,
+            "name": "Doreen",
+            "strength": 2,
+            "timeAverage": 0.0,
+            "group": "F"
+        },
+        {
+            "id": 4,
+            "name": "Ammon",
+            "strength": 2,
+            "timeAverage": 0.0,
+            "group": "M"
+        },
+        {
+            "id": 5,
+            "name": "Dan",
+            "strength": 3,
+            "timeAverage": 0.0,
+            "group": "M"
+        },
+        {
+            "id": 6,
+            "name": "Brenda",
+            "strength": 6,
+            "timeAverage": 0.0,
+            "group": "F"
+        },
+        {
+            "id": 7,
+            "name": "Jacob",
+            "strength": 2,
+            "timeAverage": 0.0,
+            "group": "M"
+        },
+        {
+            "id": 8,
+            "name": "Samuel",
+            "strength": 1,
+            "timeAverage": 0.0,
+            "group": "M"
+        },
+        {
+            "id": 9,
+            "name": "Lynn",
+            "strength": 1,
+            "timeAverage": 0.0,
+            "group": "F"
+        },
+        {
+            "id": 10,
+            "name": "Sarah",
+            "strength": 1,
+            "timeAverage": 0.0,
+            "group": "F"
+        },
+        {
+            "id": 11,
+            "name": "Ron",
+            "strength": 1,
+            "timeAverage": 0.0,
+            "group": "M"
+        },
+        {
+            "id": 12,
+            "name": "Dianna",
+            "strength": 1,
+            "timeAverage": 0.0,
+            "group": "F"
+        }
+    ],
+    "links": [
+        {
+            "source": 2,
+            "target": 3,
+            "strength": 2
+        },
+        {
+            "source": 4,
+            "target": 5,
+            "strength": 2
+        },
+        {
+            "source": 6,
+            "target": 7,
+            "strength": 2
+        },
+        {
+            "source": 1,
+            "target": 6,
+            "strength": 4
+        },
+        {
+            "source": 5,
+            "target": 6,
+            "strength": 1
+        },
+        {
+            "source": 0,
+            "target": 6,
+            "strength": 1
+        },
+        {
+            "source": 2,
+            "target": 6,
+            "strength": 2
+        },
+        {
+            "source": 6,
+            "target": 8,
+            "strength": 1
+        },
+        {
+            "source": 4,
+            "target": 6,
+            "strength": 1
+        },
+        {
+            "source": 3,
+            "target": 6,
+            "strength": 1
+        },
+        {
+            "source": 6,
+            "target": 9,
+            "strength": 1
+        },
+        {
+            "source": 6,
+            "target": 10,
+            "strength": 1
+        },
+        {
+            "source": 1,
+            "target": 5,
+            "strength": 1
+        },
+        {
+            "source": 0,
+            "target": 1,
+            "strength": 2
+        },
+        {
+            "source": 1,
+            "target": 2,
+            "strength": 1
+        },
+        {
+            "source": 1,
+            "target": 8,
+            "strength": 1
+        },
+        {
+            "source": 1,
+            "target": 4,
+            "strength": 1
+        },
+        {
+            "source": 1,
+            "target": 3,
+            "strength": 1
+        },
+        {
+            "source": 1,
+            "target": 9,
+            "strength": 1
+        },
+        {
+            "source": 1,
+            "target": 7,
+            "strength": 1
+        },
+        {
+            "source": 1,
+            "target": 10,
+            "strength": 1
+        },
+        {
+            "source": 0,
+            "target": 5,
+            "strength": 2
+        },
+        {
+            "source": 2,
+            "target": 5,
+            "strength": 2
+        },
+        {
+            "source": 5,
+            "target": 8,
+            "strength": 1
+        },
+        {
+            "source": 3,
+            "target": 5,
+            "strength": 1
+        },
+        {
+            "source": 5,
+            "target": 9,
+            "strength": 1
+        },
+        {
+            "source": 5,
+            "target": 7,
+            "strength": 1
+        },
+        {
+            "source": 5,
+            "target": 10,
+            "strength": 1
+        },
+        {
+            "source": 0,
+            "target": 2,
+            "strength": 2
+        },
+        {
+            "source": 0,
+            "target": 8,
+            "strength": 1
+        },
+        {
+            "source": 0,
+            "target": 4,
+            "strength": 1
+        },
+        {
+            "source": 0,
+            "target": 3,
+            "strength": 1
+        },
+        {
+            "source": 0,
+            "target": 9,
+            "strength": 1
+        },
+        {
+            "source": 0,
+            "target": 7,
+            "strength": 1
+        },
+        {
+            "source": 0,
+            "target": 10,
+            "strength": 1
+        },
+        {
+            "source": 2,
+            "target": 8,
+            "strength": 1
+        },
+        {
+            "source": 2,
+            "target": 4,
+            "strength": 1
+        },
+        {
+            "source": 2,
+            "target": 9,
+            "strength": 1
+        },
+        {
+            "source": 2,
+            "target": 7,
+            "strength": 1
+        },
+        {
+            "source": 2,
+            "target": 10,
+            "strength": 1
+        },
+        {
+            "source": 4,
+            "target": 8,
+            "strength": 1
+        },
+        {
+            "source": 3,
+            "target": 8,
+            "strength": 1
+        },
+        {
+            "source": 8,
+            "target": 9,
+            "strength": 1
+        },
+        {
+            "source": 7,
+            "target": 8,
+            "strength": 1
+        },
+        {
+            "source": 8,
+            "target": 10,
+            "strength": 1
+        },
+        {
+            "source": 3,
+            "target": 4,
+            "strength": 1
+        },
+        {
+            "source": 4,
+            "target": 9,
+            "strength": 1
+        },
+        {
+            "source": 4,
+            "target": 7,
+            "strength": 1
+        },
+        {
+            "source": 4,
+            "target": 10,
+            "strength": 1
+        },
+        {
+            "source": 3,
+            "target": 9,
+            "strength": 1
+        },
+        {
+            "source": 3,
+            "target": 7,
+            "strength": 1
+        },
+        {
+            "source": 3,
+            "target": 10,
+            "strength": 1
+        },
+        {
+            "source": 7,
+            "target": 9,
+            "strength": 1
+        },
+        {
+            "source": 9,
+            "target": 10,
+            "strength": 1
+        },
+        {
+            "source": 7,
+            "target": 10,
+            "strength": 1
+        },
+        {
+            "source": 6,
+            "target": 11,
+            "strength": 1
+        },
+        {
+            "source": 6,
+            "target": 12,
+            "strength": 1
+        },
+        {
+            "source": 1,
+            "target": 11,
+            "strength": 1
+        },
+        {
+            "source": 1,
+            "target": 12,
+            "strength": 1
+        },
+        {
+            "source": 11,
+            "target": 12,
+            "strength": 1
+        }
+    ]
+}

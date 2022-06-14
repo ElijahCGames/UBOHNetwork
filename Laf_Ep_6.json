@@ -1,0 +1,114 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "name": "Doreen",
+            "strength": 2,
+            "timeAverage": 1.0,
+            "group": "F"
+        },
+        {
+            "id": 1,
+            "name": "Ron",
+            "strength": 4,
+            "timeAverage": 0.0,
+            "group": "M"
+        },
+        {
+            "id": 2,
+            "name": "Dan",
+            "strength": 2,
+            "timeAverage": 0.0,
+            "group": "M"
+        },
+        {
+            "id": 3,
+            "name": "Robin",
+            "strength": 1,
+            "timeAverage": 0.0,
+            "group": "M"
+        },
+        {
+            "id": 4,
+            "name": "Samuel",
+            "strength": 1,
+            "timeAverage": 0.0,
+            "group": "M"
+        },
+        {
+            "id": 5,
+            "name": "Brenda",
+            "strength": 6,
+            "timeAverage": 0.0,
+            "group": "F"
+        },
+        {
+            "id": 6,
+            "name": "Allen",
+            "strength": 5,
+            "timeAverage": 0.4,
+            "group": "M"
+        },
+        {
+            "id": 7,
+            "name": "Dianna",
+            "strength": 2,
+            "timeAverage": 0.0,
+            "group": "F"
+        },
+        {
+            "id": 8,
+            "name": "Matilda",
+            "strength": 1,
+            "timeAverage": 0.0,
+            "group": "F"
+        }
+    ],
+    "links": [
+        {
+            "source": 1,
+            "target": 2,
+            "strength": 2
+        },
+        {
+            "source": 1,
+            "target": 3,
+            "strength": 1
+        },
+        {
+            "source": 1,
+            "target": 4,
+            "strength": 1
+        },
+        {
+            "source": 2,
+            "target": 3,
+            "strength": 1
+        },
+        {
+            "source": 2,
+            "target": 4,
+            "strength": 1
+        },
+        {
+            "source": 3,
+            "target": 4,
+            "strength": 1
+        },
+        {
+            "source": 5,
+            "target": 6,
+            "strength": 2
+        },
+        {
+            "source": 5,
+            "target": 7,
+            "strength": 2
+        },
+        {
+            "source": 5,
+            "target": 8,
+            "strength": 1
+        }
+    ]
+}

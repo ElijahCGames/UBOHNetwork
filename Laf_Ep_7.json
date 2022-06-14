@@ -1,0 +1,156 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "name": "Ron",
+            "strength": 8,
+            "timeAverage": 0.25,
+            "group": "M"
+        },
+        {
+            "id": 1,
+            "name": "Robin",
+            "strength": 2,
+            "timeAverage": 0.0,
+            "group": "M"
+        },
+        {
+            "id": 2,
+            "name": "Dan",
+            "strength": 9,
+            "timeAverage": 0.2222222222222222,
+            "group": "M"
+        },
+        {
+            "id": 3,
+            "name": "Matilda",
+            "strength": 5,
+            "timeAverage": 0.6,
+            "group": "F"
+        },
+        {
+            "id": 4,
+            "name": "Allen",
+            "strength": 2,
+            "timeAverage": 0.5,
+            "group": "M"
+        },
+        {
+            "id": 5,
+            "name": "Jacob",
+            "strength": 2,
+            "timeAverage": 1.0,
+            "group": "M"
+        },
+        {
+            "id": 6,
+            "name": "Brenda",
+            "strength": 3,
+            "timeAverage": 0.0,
+            "group": "F"
+        },
+        {
+            "id": 7,
+            "name": "Samuel",
+            "strength": 2,
+            "timeAverage": 0.5,
+            "group": "M"
+        },
+        {
+            "id": 8,
+            "name": "Dianna",
+            "strength": 4,
+            "timeAverage": 1.0,
+            "group": "F"
+        },
+        {
+            "id": 9,
+            "name": "Doreen",
+            "strength": 1,
+            "timeAverage": 1.0,
+            "group": "F"
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1,
+            "strength": 2
+        },
+        {
+            "source": 0,
+            "target": 2,
+            "strength": 8
+        },
+        {
+            "source": 0,
+            "target": 3,
+            "strength": 2
+        },
+        {
+            "source": 1,
+            "target": 2,
+            "strength": 2
+        },
+        {
+            "source": 1,
+            "target": 3,
+            "strength": 1
+        },
+        {
+            "source": 2,
+            "target": 3,
+            "strength": 2
+        },
+        {
+            "source": 2,
+            "target": 6,
+            "strength": 2
+        },
+        {
+            "source": 2,
+            "target": 7,
+            "strength": 1
+        },
+        {
+            "source": 3,
+            "target": 7,
+            "strength": 2
+        },
+        {
+            "source": 0,
+            "target": 7,
+            "strength": 1
+        },
+        {
+            "source": 4,
+            "target": 6,
+            "strength": 1
+        },
+        {
+            "source": 0,
+            "target": 6,
+            "strength": 1
+        },
+        {
+            "source": 3,
+            "target": 8,
+            "strength": 3
+        },
+        {
+            "source": 8,
+            "target": 9,
+            "strength": 1
+        },
+        {
+            "source": 3,
+            "target": 9,
+            "strength": 1
+        },
+        {
+            "source": 7,
+            "target": 8,
+            "strength": 1
+        }
+    ]
+}

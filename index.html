@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v6.js"></script>
+
+
+<!-- Create a div where the graph will take place -->
+<body style="background-color:black">
+  <div class="dropdown">
+    <button class="dropbtn"> <img src="scroll-arrow.svg">Episodes</button>
+    <div class="dropdown-content">
+      <a onclick="createGraph(1)">Episode 1: When God Was Love</a>
+      <a onclick="createGraph(2)">Episode 2: Rightful Place</a>
+      <a onclick="createGraph(3)">Episode 3: Surrender</a>
+      <a onclick="createGraph(4)">Episode 4: Church and State</a>
+      <a onclick="createGraph(5)">Episode 5: One Mighty and Strong</a>
+      <a onclick="createGraph(6)">Episode 6: Revelations</a>
+      <a onclick="createGraph(7)">Episode 7: Blood Atonement</a>
+      <a onclick="createGraph(8)">Whole Series</a>
+    </div>
+  </div> 
+  <input type="checkbox" name="Lafferty" value="Lafferty" onclick="toggleLafferty()">
+  <label style="color:white" for="Lafferty">Lafferty Only</label><br>
+<div id="my_dataviz"></div>
+</body>
+<script>
+    const radius = 8;
+
+    let epNum = 1;
+    let lafferty = false;
+    let index = 0;
+    // set the dimensions and margins of the graph
+    const margin = {top: 10, right: 10, bottom: 30, left: 10},
+      width = screen.width - margin.left - margin.right,
+      height = screen.height - margin.top - margin.bottom - 50;
+    
+    // append the svg object to the body of the page
+    const svg = d3.select("#my_dataviz")
+    .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .style("border-width","10px")
+      .style("border-color","black")
+      .style("border-style","solid")
+    .append("g")
+      .attr("transform",
+            `translate(${margin.left}, ${margin.top})`)
+            .on("keydown",function(event){
+                console.log(event);
+            });
+
+  
+
+
+    const text = svg.append("text").attr("x",0).attr("y",60).style("font", "40px Roobert").style("fill","white").text("");
+    
+    function toggleLafferty(){ 
+      if(lafferty){
+        lafferty = false;
+        createGraph(epNum,lafferty)
+      }
+      else{
+        lafferty = true;
+        createGraph(epNum,lafferty)
+      }
+    }
+
+    createGraph(8)
+
+    function createGraph(episodeNum){
+      epNum = episodeNum
+      
+      const filepaths = {
+        false : {
+          1: "Ep_1.json",
+          2: "Ep_2.json",
+          3: "Ep_3.json",
+          4: "Ep_4.json",
+          5: "Ep_5.json",
+          6: "Ep_6.json",
+          7: "Ep_7.json",
+          8: "network_uboh.json"
+        },
+        true: {
+          1: "Laf_Ep_1.json",
+          2: "Laf_Ep_2.json",
+          3: "Laf_Ep_3.json",
+          4: "Laf_Ep_4.json",
+          5: "Laf_Ep_5.json",
+          6: "Laf_Ep_6.json",
+          7: "Laf_Ep_7.json",
+          8: "Laffery.json"
+        }
+      }
+    
+    d3.json(filepaths[lafferty][epNum]).then( function( data) {
+      //const colorScale = d3.scaleOrdinal().domain([...new Set(data.nodes.map(d => d.group))]).range(["#FF560E","#FF001F","#8802C8","#6202FE"])
+
+      colorDict = {
+        "Pyre":"#FF560E",
+        "Lafferty":"#FF001F",
+        "Police":"#b202fe",
+        "M":"#FF560E",
+        "F":"#FF001F"
+      }
+      // Initialize the links
+      const link = svg
+        .selectAll("line")
+        .data(data.links)
+        .join("line")
+          .style("stroke", (d,i) => {
+            return "#aaa"
+          })
+          .style("z-index",-10)
+          .style("opacity", (d,i) => {
+            return d.strength / 10 + .5
+          })
+          .style("stroke-width", function(d,i){
+            return radius/5 * Math.sqrt(d.strength) * 2  + "px"
+          })
+          .on("mouseover", function(d,i){
+                text.text(i.source.name + " - " + i.target.name + ": " + i.strength)
+                d3.select(this).transition().style("stroke",'#fff')
+          })
+          .on("mouseout", function(d,i){
+                text.text("");
+                d3.select(this).transition().style("stroke-width",radius/10 * d.strength + "px");
+                d3.select(this).transition().style("stroke",'#aaa');
+          })
+    
+      // Initialize the nodes
+          
+      // Let's list the force we wanna apply on the network
+      const simulation = d3.forceSimulation(data.nodes)                 // Force algorithm is applied to data.nodes
+          .force("link", d3.forceLink()                              // This force provides links between nodes
+                .id(function(d) { return d.id; })                     // This provide  the id of a node
+                .links(data.links)
+                .strength( (d) => {
+                  return d.strength / (radius * 10);
+                }
+                )                                 // and this the list of links
+          )
+          .force("charge", d3.forceManyBody().strength(-radius*radius * 15))         // This adds repulsion between nodes. Play with the -400 for the repulsion strength
+          .force("x", d3.forceX(width/2))
+          .force("y", d3.forceY(height/2).strength(.3).y((d) => (d.timeAverage * height/2) + height/4))
+          //.force("y", d3.forceY(height/2))
+          .velocityDecay(.5)
+          .force("collision", d3.forceCollide(radius))
+          .on("tick", ticked);
+    
+        const node = svg
+        .selectAll("circle")
+        .data(data.nodes)
+        .join("circle")
+          .raise()
+          .attr("r", (d) => {
+            return (radius - 3) + d.strength / 2
+          })
+          .style("z-index",10)
+          .attr("cx",width/2)
+          .attr("cy",height/2)
+          .attr("fill",(d) => {
+            if(d.group != undefined){
+              return colorDict[d.group]
+            }
+
+            return "blue"
+          })
+          .attr("stroke-width",(d) => {
+            if(d.name == "Jeb" || d.name=="Brenda"){
+              return "3px"
+            }
+
+            return "0px"
+          })
+          .attr("stroke","white")
+          .call(drag(simulation))
+          .on("mouseover", function(d,i){
+              d3.select(this).transition().attr("fill","#fff");
+                text.text(d.target.__data__.name + ": " + d.target.__data__.strength);
+              simulation.force("collision",d3.forceCollide(function(n){
+                  if(d.target.__data__.name == n.name) return radius*2;
+                  return radius;
+              }));
+              //console.log(i.y);
+          })
+          .on("mouseout",function(d,i){
+            d3.select(this).transition().attr("fill", (d) => {
+              if(d.group != undefined){
+              return colorDict[d.group]
+            }
+
+            return "blue";
+          })
+            text.text("");
+            simulation.restart();
+            simulation.force("collision",d3.forceCollide(radius));
+          });
+      // This function is run at each iteration of the force algorithm, updating the nodes position.
+      function ticked() {
+        
+        link
+            .attr("x1", function(d) { return d.source.x; })
+            .attr("y1", function(d) { return d.source.y; })
+            .attr("x2", function(d) { return d.target.x; })
+            .attr("y2", function(d) { return d.target.y; });
+    
+        node
+             .attr("cx", function (d) { return d.x+0; })
+             .attr("cy", function(d) { return d.y-0; })
+      }
+
+      function drag(simulation) {    
+        function dragstarted(event) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        event.subject.fx = event.subject.x;
+        event.subject.fy = event.subject.y;
+        }
+        
+        function dragged(event) {
+        event.subject.fx = event.x;
+        event.subject.fy = event.y;
+        }
+        
+        function dragended(event) {
+        if (!event.active) simulation.alphaTarget(0);
+        event.subject.fx = null;
+        event.subject.fy = null;
+        }
+        
+        return d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended);
+    }
+    
+    });
+  };
+    </script>
+
+<style>
+   /* Dropdown Button */
+
+circle{
+  cursor: pointer;
+}
+.dropbtn {
+  cursor: pointer;
+  background-color: #FF560E;
+  border-radius: 8px;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  font-family: "Roobert";
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #cc440a} 
+
+label{
+  font-family: "Roobert";
+}
+
+input{
+  cursor: pointer;
+}
+
+img{
+  transform: rotate(90deg);
+  vertical-align: middle;
+  margin-right: 7px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+</style>

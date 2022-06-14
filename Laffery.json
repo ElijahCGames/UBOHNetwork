@@ -1,0 +1,482 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "name": "Allen",
+            "strength": 38,
+            "timeAverage": 0.6052631578947368,
+            "group": "M"
+        },
+        {
+            "id": 1,
+            "name": "Brenda",
+            "strength": 26,
+            "timeAverage": 0.0,
+            "group": "F"
+        },
+        {
+            "id": 2,
+            "name": "Ron",
+            "strength": 28,
+            "timeAverage": 0.07142857142857142,
+            "group": "M"
+        },
+        {
+            "id": 3,
+            "name": "Dianna",
+            "strength": 16,
+            "timeAverage": 0.25,
+            "group": "F"
+        },
+        {
+            "id": 4,
+            "name": "Dan",
+            "strength": 26,
+            "timeAverage": 0.07692307692307693,
+            "group": "M"
+        },
+        {
+            "id": 5,
+            "name": "Matilda",
+            "strength": 19,
+            "timeAverage": 0.15789473684210525,
+            "group": "F"
+        },
+        {
+            "id": 6,
+            "name": "Robin",
+            "strength": 22,
+            "timeAverage": 0.36363636363636365,
+            "group": "M"
+        },
+        {
+            "id": 7,
+            "name": "Samuel",
+            "strength": 15,
+            "timeAverage": 0.26666666666666666,
+            "group": "M"
+        },
+        {
+            "id": 8,
+            "name": "Ammon",
+            "strength": 8,
+            "timeAverage": 0.0,
+            "group": "M"
+        },
+        {
+            "id": 9,
+            "name": "Doreen",
+            "strength": 10,
+            "timeAverage": 0.3,
+            "group": "F"
+        },
+        {
+            "id": 10,
+            "name": "Lynn",
+            "strength": 6,
+            "timeAverage": 0.16666666666666666,
+            "group": "F"
+        },
+        {
+            "id": 11,
+            "name": "Jacob",
+            "strength": 10,
+            "timeAverage": 0.2,
+            "group": "M"
+        },
+        {
+            "id": 12,
+            "name": "Sarah",
+            "strength": 4,
+            "timeAverage": 0.25,
+            "group": "F"
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1,
+            "strength": 12
+        },
+        {
+            "source": 1,
+            "target": 2,
+            "strength": 6
+        },
+        {
+            "source": 1,
+            "target": 3,
+            "strength": 10
+        },
+        {
+            "source": 1,
+            "target": 4,
+            "strength": 8
+        },
+        {
+            "source": 1,
+            "target": 5,
+            "strength": 9
+        },
+        {
+            "source": 1,
+            "target": 6,
+            "strength": 5
+        },
+        {
+            "source": 1,
+            "target": 7,
+            "strength": 5
+        },
+        {
+            "source": 1,
+            "target": 8,
+            "strength": 4
+        },
+        {
+            "source": 1,
+            "target": 9,
+            "strength": 4
+        },
+        {
+            "source": 1,
+            "target": 10,
+            "strength": 5
+        },
+        {
+            "source": 1,
+            "target": 11,
+            "strength": 5
+        },
+        {
+            "source": 0,
+            "target": 2,
+            "strength": 6
+        },
+        {
+            "source": 0,
+            "target": 3,
+            "strength": 5
+        },
+        {
+            "source": 0,
+            "target": 4,
+            "strength": 5
+        },
+        {
+            "source": 0,
+            "target": 5,
+            "strength": 5
+        },
+        {
+            "source": 0,
+            "target": 6,
+            "strength": 6
+        },
+        {
+            "source": 0,
+            "target": 7,
+            "strength": 5
+        },
+        {
+            "source": 0,
+            "target": 8,
+            "strength": 4
+        },
+        {
+            "source": 0,
+            "target": 9,
+            "strength": 4
+        },
+        {
+            "source": 0,
+            "target": 10,
+            "strength": 4
+        },
+        {
+            "source": 0,
+            "target": 11,
+            "strength": 5
+        },
+        {
+            "source": 2,
+            "target": 3,
+            "strength": 7
+        },
+        {
+            "source": 2,
+            "target": 4,
+            "strength": 17
+        },
+        {
+            "source": 2,
+            "target": 5,
+            "strength": 7
+        },
+        {
+            "source": 2,
+            "target": 6,
+            "strength": 9
+        },
+        {
+            "source": 2,
+            "target": 7,
+            "strength": 9
+        },
+        {
+            "source": 2,
+            "target": 8,
+            "strength": 6
+        },
+        {
+            "source": 2,
+            "target": 9,
+            "strength": 5
+        },
+        {
+            "source": 2,
+            "target": 10,
+            "strength": 3
+        },
+        {
+            "source": 2,
+            "target": 11,
+            "strength": 6
+        },
+        {
+            "source": 3,
+            "target": 4,
+            "strength": 3
+        },
+        {
+            "source": 3,
+            "target": 5,
+            "strength": 7
+        },
+        {
+            "source": 3,
+            "target": 6,
+            "strength": 3
+        },
+        {
+            "source": 3,
+            "target": 7,
+            "strength": 4
+        },
+        {
+            "source": 3,
+            "target": 8,
+            "strength": 3
+        },
+        {
+            "source": 3,
+            "target": 9,
+            "strength": 4
+        },
+        {
+            "source": 3,
+            "target": 10,
+            "strength": 3
+        },
+        {
+            "source": 3,
+            "target": 11,
+            "strength": 3
+        },
+        {
+            "source": 4,
+            "target": 5,
+            "strength": 11
+        },
+        {
+            "source": 4,
+            "target": 6,
+            "strength": 13
+        },
+        {
+            "source": 4,
+            "target": 7,
+            "strength": 11
+        },
+        {
+            "source": 4,
+            "target": 8,
+            "strength": 7
+        },
+        {
+            "source": 4,
+            "target": 9,
+            "strength": 4
+        },
+        {
+            "source": 4,
+            "target": 10,
+            "strength": 5
+        },
+        {
+            "source": 4,
+            "target": 11,
+            "strength": 7
+        },
+        {
+            "source": 5,
+            "target": 6,
+            "strength": 7
+        },
+        {
+            "source": 5,
+            "target": 7,
+            "strength": 7
+        },
+        {
+            "source": 5,
+            "target": 8,
+            "strength": 4
+        },
+        {
+            "source": 5,
+            "target": 9,
+            "strength": 6
+        },
+        {
+            "source": 5,
+            "target": 10,
+            "strength": 5
+        },
+        {
+            "source": 5,
+            "target": 11,
+            "strength": 4
+        },
+        {
+            "source": 6,
+            "target": 7,
+            "strength": 9
+        },
+        {
+            "source": 6,
+            "target": 8,
+            "strength": 5
+        },
+        {
+            "source": 6,
+            "target": 9,
+            "strength": 4
+        },
+        {
+            "source": 6,
+            "target": 10,
+            "strength": 6
+        },
+        {
+            "source": 6,
+            "target": 11,
+            "strength": 6
+        },
+        {
+            "source": 7,
+            "target": 8,
+            "strength": 6
+        },
+        {
+            "source": 7,
+            "target": 9,
+            "strength": 4
+        },
+        {
+            "source": 7,
+            "target": 10,
+            "strength": 5
+        },
+        {
+            "source": 7,
+            "target": 11,
+            "strength": 7
+        },
+        {
+            "source": 8,
+            "target": 9,
+            "strength": 4
+        },
+        {
+            "source": 8,
+            "target": 10,
+            "strength": 4
+        },
+        {
+            "source": 8,
+            "target": 11,
+            "strength": 6
+        },
+        {
+            "source": 9,
+            "target": 10,
+            "strength": 4
+        },
+        {
+            "source": 9,
+            "target": 11,
+            "strength": 4
+        },
+        {
+            "source": 10,
+            "target": 11,
+            "strength": 4
+        },
+        {
+            "source": 1,
+            "target": 12,
+            "strength": 3
+        },
+        {
+            "source": 0,
+            "target": 12,
+            "strength": 1
+        },
+        {
+            "source": 4,
+            "target": 12,
+            "strength": 2
+        },
+        {
+            "source": 6,
+            "target": 12,
+            "strength": 2
+        },
+        {
+            "source": 5,
+            "target": 12,
+            "strength": 2
+        },
+        {
+            "source": 7,
+            "target": 12,
+            "strength": 2
+        },
+        {
+            "source": 8,
+            "target": 12,
+            "strength": 1
+        },
+        {
+            "source": 9,
+            "target": 12,
+            "strength": 1
+        },
+        {
+            "source": 10,
+            "target": 12,
+            "strength": 2
+        },
+        {
+            "source": 11,
+            "target": 12,
+            "strength": 1
+        },
+        {
+            "source": 3,
+            "target": 12,
+            "strength": 1
+        }
+    ]
+}
